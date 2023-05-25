@@ -1,0 +1,17 @@
+#discount {
+    color: rgb(55, 109, 157);
+}
+
+#off {
+    background-color: aqua;
+}
+
+#logo {
+    border: 3px solid black;
+    height: 320px;
+    width: 328px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 25px;
+}

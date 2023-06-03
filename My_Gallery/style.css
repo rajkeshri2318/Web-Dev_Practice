@@ -1,0 +1,93 @@
+
+    /* Universal property set */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+    /* set prop. for viewpot */
+#wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+    /* set prop. for whole content item */
+.container{
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+    /* For heading */
+.container h1 {
+    margin: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;   
+
+}
+
+    /* for all photos */
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+     /*for every image-card  */
+.card{
+    width: 32%;                /* har img card ka width set krna &  baki ka 4% right side border */ 
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;    /* border round*/
+    overflow: hidden;
+}
+
+    /* for img box   */
+.card img{
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);    /* color ko b/w kr dega  */
+    box-shadow: 0 0 20px #333;
+    object-fit: cover;
+}
+
+    /* hover on img effects */
+.card:hover {
+    transform: scale(1.04);     /* for scaling img size */
+    transition: 0.5s;       /* for some delay */
+    filter: drop-shadow(0 0 10px #333);    
+
+}
+
+/*  */
+.card:hover img{
+    filter: grayscale(0%);   /* hover hone pr grey color hata dega */
+}
+
+.card figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    opacity: 0;          /* caption ko hide krne ke liye */
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255,255,255, 1%));   
+}
+
+
+.card:hover figcaption{
+    opacity: 1;            /* for showing caption on hover */
+    transform: scale(1.03);
+    transition: 0.5;
+}
